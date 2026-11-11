@@ -1,0 +1,125 @@
+/* Import Google Font for a clean modern typography look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Main Container Customization */
+html, body, [data-testid="stAppViewContainer"] {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3eef2;
+}
+
+.block-container, [data-testid="stMainBlockContainer"], [data-testid="stAppViewBlockContainer"] {
+    max-width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    padding-top: 2rem;
+}
+
+/* Custom Title Style */
+.title-text {
+    font-size: 7.5rem;
+    font-weight: 1000;
+    line-height: 1.5;
+    color: #522f0e;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Description Text Styling */
+.description {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #38414d;
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 15px -4px rgba(0, 0.05, 0.5, 0.5);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Text Area Field Customization */
+[data-testid="stTextArea"] textarea {
+    border-radius: 10px;
+    border: 1.5px solid #f8e1cb;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: #1e293b;
+    background-color: #f8e1cb;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Text Area Label Styling */
+[data-testid="stTextArea"] label p {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #334155;
+}
+
+/* Primary Button Styling */
+/*div.stButton > button {
+
+    width: 100%;
+    background-color: #522f0e;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 15px 15px -4px rgba(0, 0.05, 0.5, 0.5);
+    padding: 0.7}
+
+/* 1. Analyze Button Styling */
+div.stButton > button {
+    width: 100%;
+    background-color: #522f0e !important; /* Brown matching your title */
+    color: #ffffff !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 10px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+div.stButton > button:hover {
+    background-color: #381f09 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+div.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Base styling for all result boxes */
+.result-box {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. AI-Generated Box (Red) */
+.ai-result {
+    background-color: #fee2e2 !important;
+    color: #991b1b !important;
+    border-left: 6px solid #ef4444 !important;
+}
+
+/* 2. Human-Written Box (Green) */
+.human-result {
+    background-color: #d1fae5 !important;
+    color: #065f46 !important;
+    border-left: 6px solid #10b981 !important;
+}
+
+/* 3. Empty Warning Box (Yellow/Amber) */
+.warning-result {
+    background-color: #fef3c7 !important;
+    color: #92400e !important;
+    border-left: 6px solid #f59e0b !important;
+}
