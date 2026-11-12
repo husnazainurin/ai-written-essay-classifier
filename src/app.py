@@ -4,9 +4,6 @@ from pathlib import Path
 # Add project root directory to sys.path so app.py can import from train/
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-# Import the text preprocessing function from the file where your friend trained the model
-from train.lr_classifier import preprocesses_text  # Or svm_classifier depending on which was used
-
 import streamlit as st
 import pickle
 

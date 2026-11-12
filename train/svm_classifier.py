@@ -1,5 +1,4 @@
 import pandas as pd
-import re
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
@@ -8,15 +7,13 @@ from sklearn.model_selection import cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import StratifiedKFold
 import pickle
+import sys
+from pathlib import Path
 import textwrap
 
-def preprocesses_text(text):
-    '''This method will lower case all letters, replace special characters with space 
-    and replace consecutive spaces or line breaks with a space. '''
-    text = text.lower()
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from train.preprocess import preprocesses_text
 
 
 # Import dataset

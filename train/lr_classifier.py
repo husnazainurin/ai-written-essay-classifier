@@ -1,21 +1,16 @@
 import pandas as pd
-import re
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split,StratifiedKFold,cross_val_score
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 import pickle
+from pathlib import Path
 import textwrap
+import sys
 
-def preprocesses_text(text):
-    '''This method will lower case all letters, replace special characters with space 
-    and replace consecutive spaces or line breaks with a space. '''
-    text = text.lower()
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
-
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from train.preprocess import preprocesses_text
 
 # Import dataset
 data = pd.read_csv("dataset/reviews_class.csv")
@@ -89,7 +84,7 @@ with open('model/lr_model.pkl', 'wb') as file:
     pickle.dump(pipeline, file)
 
 
-# New input testing. But this will be done in GUI app interface so I'm commenting it out. Feel free to uncomment this!
+# New input testing. But this will be done in GUI app interface so I'm commenting it out. Feel free to uncomment this if you prefer CLI testing!
 # print("==============================================================\n")
 # new_text = input("\n  In about 50 words, tell us about the best TV show you have ever watch,\n"
 #                  "  and why? Explain a little, like who's you favorite character, \n"
