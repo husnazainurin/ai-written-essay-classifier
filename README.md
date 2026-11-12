@@ -35,7 +35,7 @@ We asked both humans and generative AIs to answer this question:
 |AI-Generated Essays|Gemini, ChatGPT and Microsoft Copilot|For consistency, all three chatbots were prompted with the exact same word-for-word question used in the e-survey for human respondents.|
 
 ## Methodology Overview
-This is an overview of the methodology. I considered two models for this task, which is Linear Regression (LR) and State Vector Machine (SVM), as they are suitable for numerical TF-IDF as the main predictor.
+This is an overview of the methodology. I considered two models for this task, which is Logistic Regression (LR) and Support Vector Machine (SVM), as they are suitable for numerical TF-IDF as the main predictor.
 <img width="758" height="339" alt="image" src="https://github.com/user-attachments/assets/a4b14517-693e-4e29-8e29-1583d4d33c7c" />
 
 ## Performance Overview
